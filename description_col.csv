@@ -1,0 +1,37 @@
+Nome_Variabile,Descrizione,Data_Type
+annual_inc,The combined self-reported annual income provided by the co-borrowers during registration,float64
+application_type,Indicates whether the loan is an individual application or a joint application with two co-borrowers,object
+dti,"A ratio calculated using the co-borrowers' total monthly payments on the total debt obligations, excluding mortgages and the requested LC loan, divided by the co-borrowers' combined self-reported monthly income",float64
+earliest_cr_line, Earliest credit line at time of application for the secondary applicant,object
+emp_length,Employment length in years. Possible values are between 0 and 10 where 0 means less than one year and 10 means ten or more years. ,object
+fico_range_high,The upper boundary range the borrower’s FICO at loan origination belongs to.,float64
+fico_range_low,The lower boundary range the borrower’s FICO at loan origination belongs to.,float64
+grade,LC assigned loan grade,object
+home_ownership,"The home ownership status provided by the borrower during registration or obtained from the credit report. Our values are: RENT, OWN, MORTGAGE, OTHER",object
+inq_last_6mths,The number of inquiries in past 6 months (excluding auto and mortgage inquiries),float64
+installment,The monthly payment owed by the borrower if the loan originates.,float64
+int_rate,Interest Rate on the loan,float64
+issue_d,The month which the loan was funded,object
+loan_amnt,"The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.",float64
+loan_status,Current status of the loan,object
+mo_sin_rcnt_tl,Months since most recent account opened,float64
+mort_acc,Number of mortgage accounts.,float64
+mths_since_recent_bc,Months since most recent bankcard account opened.,float64
+disbursement_method,"The method by which the borrower receives their loan. Possible values are: CASH, DIRECT_PAY",object
+verification_status,"Indicates if income was verified by LC, not verified, or if the income source was verified",object
+term,The number of payments on the loan. Values are in months and can be either 36 or 60.,object
+tax_liens,Number of tax liens,float64
+sub_grade,LC assigned loan subgrade,object
+purpose,A category provided by the borrower for the loan request. ,object
+pub_rec_bankruptcies,Number of public record bankruptcies,float64
+percent_bc_gt_75,Percentage of all bankcard accounts > 75% of limit.,float64
+num_bc_tl,Number of bankcard accounts,float64
+num_actv_rev_tl,Number of currently active revolving trades,float64
+num_accts_ever_120_pd,Number of accounts ever 120 or more days past due,float64
+acc_now_delinq,The number of accounts on which the borrower is now delinquent.,float64
+acc_open_past_24mths,Number of trades opened in past 24 months.,float64
+open_acc,The number of open credit lines in the borrower's credit file.,float64
+pct_tl_nvr_dlq,Percent of trades never delinquent,float64
+pub_rec,Number of derogatory public records,float64
+total_acc,The total number of credit lines currently in the borrower's credit file,float64
+total_bal_ex_mort,Total credit balance excluding mortgage,float64
