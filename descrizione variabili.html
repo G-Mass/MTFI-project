@@ -1,0 +1,211 @@
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Descrizione</th>
+      <th>Data_Type</th>
+    </tr>
+    <tr>
+      <th>Nome_Variabile</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>annual_inc</th>
+      <td>The combined self-reported annual income provided by the co-borrowers during registration</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>application_type</th>
+      <td>Indicates whether the loan is an individual application or a joint application with two co-borrowers</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>dti</th>
+      <td>A ratio calculated using the co-borrowers' total monthly payments on the total debt obligations, excluding mortgages and the requested LC loan, divided by the co-borrowers' combined self-reported monthly income</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>earliest_cr_line</th>
+      <td>Earliest credit line at time of application for the secondary applicant</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>emp_length</th>
+      <td>Employment length in years. Possible values are between 0 and 10 where 0 means less than one year and 10 means ten or more years.</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>fico_range_high</th>
+      <td>The upper boundary range the borrower’s FICO at loan origination belongs to.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>fico_range_low</th>
+      <td>The lower boundary range the borrower’s FICO at loan origination belongs to.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>grade</th>
+      <td>LC assigned loan grade</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>home_ownership</th>
+      <td>The home ownership status provided by the borrower during registration or obtained from the credit report. Our values are: RENT, OWN, MORTGAGE, OTHER</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>inq_last_6mths</th>
+      <td>The number of inquiries in past 6 months (excluding auto and mortgage inquiries)</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>installment</th>
+      <td>The monthly payment owed by the borrower if the loan originates.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>int_rate</th>
+      <td>Interest Rate on the loan</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>issue_d</th>
+      <td>The month which the loan was funded</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>loan_amnt</th>
+      <td>The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>loan_status</th>
+      <td>Current status of the loan</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>mo_sin_rcnt_tl</th>
+      <td>Months since most recent account opened</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>mort_acc</th>
+      <td>Number of mortgage accounts.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>mths_since_recent_bc</th>
+      <td>Months since most recent bankcard account opened.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>disbursement_method</th>
+      <td>The method by which the borrower receives their loan. Possible values are: CASH, DIRECT_PAY</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>verification_status</th>
+      <td>Indicates if income was verified by LC, not verified, or if the income source was verified</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>term</th>
+      <td>The number of payments on the loan. Values are in months and can be either 36 or 60.</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>tax_liens</th>
+      <td>Number of tax liens</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>sub_grade</th>
+      <td>LC assigned loan subgrade</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>purpose</th>
+      <td>A category provided by the borrower for the loan request.</td>
+      <td>object</td>
+    </tr>
+    <tr>
+      <th>pub_rec_bankruptcies</th>
+      <td>Number of public record bankruptcies</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>percent_bc_gt_75</th>
+      <td>Percentage of all bankcard accounts &gt; 75% of limit.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>num_bc_tl</th>
+      <td>Number of bankcard accounts</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>num_actv_rev_tl</th>
+      <td>Number of currently active revolving trades</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>num_accts_ever_120_pd</th>
+      <td>Number of accounts ever 120 or more days past due</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>acc_now_delinq</th>
+      <td>The number of accounts on which the borrower is now delinquent.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>acc_open_past_24mths</th>
+      <td>Number of trades opened in past 24 months.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>open_acc</th>
+      <td>The number of open credit lines in the borrower's credit file.</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>pct_tl_nvr_dlq</th>
+      <td>Percent of trades never delinquent</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>pub_rec</th>
+      <td>Number of derogatory public records</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>total_acc</th>
+      <td>The total number of credit lines currently in the borrower's credit file</td>
+      <td>float64</td>
+    </tr>
+    <tr>
+      <th>total_bal_ex_mort</th>
+      <td>Total credit balance excluding mortgage</td>
+      <td>float64</td>
+    </tr>
+  </tbody>
+</table>
+</div>
