@@ -15,8 +15,20 @@ head(X_train)
 table(y_train)
 
 bart_model = pbart(X_train, y_train$loan_status, X_val)
-hist(bart_model$prob.test)
+hist(bart_model$prob.test.mean)
 
 library(pROC)
 ?roc
-bart_roc = roc(y_val$loan_status ~ bart_model$prob.test.mean, print.auc = TRUE, plot = TRUE)
+bart_roc_val = roc(y_val$loan_status ~ bart_model$prob.test.mean, print.auc = TRUE, plot = TRUE)
+bart_roc_train = roc(y_train$loan_status ~ bart_model$prob.train.mean, print.auc = TRUE, plot = TRUE)
+
+
+write.csv(bart_model$prob.test.mean, "bart_phat_val.csv")
+
+predictions = predict(bart_model, X_val)
+sum((predictions$prob.test.mean - bart_model$prob.test.mean)<0.00000001)
+
+mean_var_count = colMeans(bart_model$varcount)
+plot(mean_var_count)
+barplot(sort(mean_var_count))
+write.csv(mean_var_count, "mean_var_counts.csv")
