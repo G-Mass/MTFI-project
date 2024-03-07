@@ -32,3 +32,7 @@ mean_var_count = colMeans(bart_model$varcount)
 plot(mean_var_count)
 barplot(sort(mean_var_count))
 write.csv(mean_var_count, "mean_var_counts.csv")
+
+mean(bart_model$treedraws$cutpoints$sub_grade)
+sum(bart_model$varcount.mean == mean_var_count)
+
